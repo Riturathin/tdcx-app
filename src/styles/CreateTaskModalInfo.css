@@ -1,0 +1,20 @@
+.create-task-modal-info {
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    margin: 0 auto;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.create-task-modal-info-heading {
+	font-size: 20px;
+	color: #555;
+	font-weight: 400;
+}
+
+.create-task-modal-info .add-task {
+	width:100%;
+	font-size: 13px;
+}

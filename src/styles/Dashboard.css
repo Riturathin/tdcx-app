@@ -1,0 +1,39 @@
+.dashboard {
+	padding: 40px;
+	background: #f1f1f1;
+}
+.search-and-create-wrapper .open-modal-button {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.task-list-container {
+	position: relative;
+}
+
+.search-and-create-wrapper {
+	position: absolute;
+	width: 60%;
+	top: 15px;
+	right: 15px;
+}
+
+.new-task-modal {
+	display: block;
+}
+
+.modal-false {
+	display: none;
+}
+
+@media screen and ( max-width: 640px ) {
+	.dashboard {
+		padding: 15px 0;
+	}
+
+	.search-and-create-wrapper {
+		width: 100%;
+		top: 50px;
+	}
+}

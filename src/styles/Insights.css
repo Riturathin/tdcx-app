@@ -1,0 +1,22 @@
+.completed-tasks-pointer {
+	display: inline-block;
+  height: 30px;
+  background: #007bff;
+  width: 2px;
+  transform: rotate(55deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.completed-tasks-legend {
+	font-size: 10px;
+  color: #007bff;
+  position: absolute;
+  width: 30px;
+  top: -8px;
+  right: -45px;
+}
+.insights {
+	position: relative;
+}

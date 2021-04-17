@@ -1,0 +1,20 @@
+.sign-up-link {
+	font-size: 12px;
+	color: #777;
+}
+
+.login-modal {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-modal .add-task {
+	width: 100%;
+}

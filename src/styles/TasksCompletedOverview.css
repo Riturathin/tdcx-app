@@ -1,0 +1,46 @@
+.total-completed-tasks {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #fff;
+	height: 100%;
+}
+
+.task-completed-overview-heading {
+	font-weight: 300;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.task-completed-figure {
+	font-size: 60px;
+  color: #0c73be;
+}
+
+.task-completed-figure-total {
+	font-weight: 400;
+  color: #888;
+  font-size: 20px;
+}
+
+.latest-completed-task{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	font-size: 14px;
+  color: #777;
+}
+
+.insights {
+	width: 102px;
+  margin: 0 auto
+}
+
+.total-completed-tasks ul {
+	padding-left: 15px;
+}
+
+@media screen and ( max-width: 640px ) {
+	.card-wrapper {
+		margin-bottom: 20px;
+	}
+}

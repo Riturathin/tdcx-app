@@ -1,0 +1,10 @@
+.validation-errors-title {
+
+}
+.validation-errors-list {
+	list-style: none;
+}
+
+.validation-errors-list-item {
+	list-style: disc;
+}
