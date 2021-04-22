@@ -5,16 +5,20 @@ import TasksListView from '../components/TasksListView';
 import EditTask from '../components/EditTask';
 import Register from '../components/Register';
 import Login from '../components/Login';
+import Test from '../components/Test';
 import history from '../browser/history';
+import PrivateRoute from '../authentication/PrivateRoute';
 
-const RouteManager = () => 
+const RouteManager = (props) => 
 	<Router history={history}>
 		<Switch>
-			<Route exact path='/login' component={ Login } key="login"></Route>
-      <Route exact path='/' exact component={ Dashboard } key="dashboard"></Route>
-      <Route path='/tasks/' exact component={ TasksListView } key="taskslist"></Route>
-      <Route path='/task/:id' exact component={ EditTask } key="edit"></Route>
+			<Route path='/login' component={ Login } key="login"></Route>
+      <PrivateRoute exact path='/dashboard' component={ Dashboard } key="dashboard"></PrivateRoute>
+      <PrivateRoute exact path='/' component={ Dashboard } key="dashboard"></PrivateRoute>
+      <PrivateRoute path='/tasks/' exact component={ TasksListView } key="taskslist"></PrivateRoute>
+      <PrivateRoute path='/task/:id' exact component={ EditTask } key="edit"></PrivateRoute>
       <Route path='/register' exact component={ Register } key="register"></Route>
+      <PrivateRoute path='/test' exact component={ Test } key="test"></PrivateRoute>
     </Switch>
   </Router>
 

@@ -4,8 +4,8 @@ import '../styles/Logout.css';
 
 const Logout = () => {
 	const flushCurrentUserSession = () => {
-		localStorage.removeItem('token')
-		localStorage.removeItem('username')
+		sessionStorage.removeItem('token')
+		sessionStorage.removeItem('username')
 	}
 
 	return ( 

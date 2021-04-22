@@ -5,6 +5,7 @@ import Dashboard from '../components/Dashboard';
 import Home from '../components/Home';
 import Login from '../components/Login';
 import Register from '../components/Register';
+import Header from '../common/Header';
 import {
   Route,
   Redirect
@@ -12,7 +13,7 @@ import {
 
 
 const isAuthenticated = () => { 
-  const token = localStorage.getItem('token');
+  const token = sessionStorage.getItem('token');
   try {
     if(token){
       return true;
@@ -26,51 +27,30 @@ const isAuthenticated = () => {
 }
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const registrationRequested = localStorage.getItem('registrationRequested');
-  const [ isRegistrationRequested , setIsRegistrationRequested ] = useState(false);
-
-  // useEffect(() => {
-  //   const registrationRequested = localStorage.getItem('registrationRequested');
-  //   alert(registrationRequested)
-  //   setIsRegistrationRequested(registrationRequested)
-  // });
   return (
-    <Route
-      {...rest}
-      render={props =>
-        isAuthenticated() ? (
-        	<>
-        		<Home {...props} />
-        	</>
-        ) : (
-        <>
-        {
-          !isRegistrationRequested ? 
-            (
-              <>
-              <Route exact path='/login' component={ Login }></Route>
-                <Redirect
+    <>
+      <Route
+        {...rest}
+        render={ props =>
+          isAuthenticated() ? (
+          	<>
+              <Header />
+          		<Component {...props} />
+          	</>
+          ) : 
+          (       
+            <>
+              <Route path='/login' component={ Login }></Route>
+              <Redirect
                   to={{
-                    pathname: "/login",
+                    pathname: "/login"
                   }}
                 />
-            </>
-            ):
-            (
-              <>
-                <Route exact path='/register' component={ Register }></Route>
-                  <Redirect
-                    to={{
-                      pathname: "/register",
-                    }}
-                />
-              </>
-            )    
-          }
-        </>
-        )
+            </>    
+          )
       }
     />
+  </>
   );
 }
 

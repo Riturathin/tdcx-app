@@ -49,7 +49,7 @@ const TasksList = (props) => {
 
 			<ul className='tasks-list'>
 				{props.tasks.slice(0,4).map( task => {
-					return <li id={ task._id } key={ task.name }>
+					return <li id={ task._id } key={ task._id }>
 					 	<input type="checkbox" 
 					 					aria-label={ task.name } 
 					 					value={ task.status } 

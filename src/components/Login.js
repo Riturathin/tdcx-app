@@ -13,6 +13,9 @@ const Login = () => {
 	const [ isAuthenticated , setIsAuthenticated ] = useState(false);
 	const [ top, setTop ] = useState('0');
 	const [ register, setRegister ] = useState(false);
+	const [redirectToReferrer, setRedirectToReferrer ] = useState(false);
+
+
 
 	useEffect(() => {
 		const setModalPosition = () => {
@@ -38,8 +41,8 @@ const Login = () => {
 			})
 			.then( data => {
         console.log(data.data.username)
-				localStorage.setItem( 'token' ,  data.data.token );
-				localStorage.setItem( 'username' , data.data.username );
+				sessionStorage.setItem( 'token' ,  data.data.token );
+				sessionStorage.setItem( 'username' , data.data.username );
 				setIsAuthenticated(data.data.success)
 			})
 			.catch( error => {
@@ -52,8 +55,9 @@ const Login = () => {
 	}
 
 	const redirectToRegister = () => {
+		debugger
 		localStorage.setItem( 'registrationRequested' , true );
-		window.location.reload()
+		// window.location.reload()
 	}
 
 	return (

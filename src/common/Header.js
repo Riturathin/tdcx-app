@@ -9,7 +9,7 @@ const Header = () => {
 	const [ username , setUsername ] = useState('');
 
 	useEffect(() => {
-		const username = localStorage.getItem('username');
+		const username = sessionStorage.getItem('username');
 		setUsername( username )
 		console.log( username )
 	}, []);
