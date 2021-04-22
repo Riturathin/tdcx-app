@@ -70,7 +70,7 @@ const EditTask = ({match}) => {
 
 	return ( 
 		<div className='container'>
-			<Modal modalData={modalData}/>
+			<CreateTaskModal />
 			<div className='create-task-modal-info' style={{top: top, left: left }}>
 				<h4 className="create-task-modal-info-heading">Update Task</h4>
 				<form onSubmit={ handleSubmit }>

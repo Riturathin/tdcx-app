@@ -20,7 +20,7 @@ const Modal = ( props ) => {
 
 	return (
 			<div className='modal-class'>
-				<div className='modal-info' style={{top: top, left: left }}>
+				{/*<div className='modal-info' style={{top: top, left: left }}>
 					<h4 className="create-task-modal-info-heading">{props.modalData.title}</h4>
 					<form >
 					  <div className="">
@@ -34,7 +34,7 @@ const Modal = ( props ) => {
 				      <button type="text" className="btn btn-primary add-task">{props.modalData.buttonText}</button>
 				    </div>
 					</form>
-				</div>
+				</div>*/}
 			</div>
 	)
 }
