@@ -5,7 +5,6 @@ import TasksListView from '../components/TasksListView';
 import EditTask from '../components/EditTask';
 import Register from '../components/Register';
 import Login from '../components/Login';
-import Test from '../components/Test';
 import history from '../browser/history';
 import PrivateRoute from '../authentication/PrivateRoute';
 
@@ -18,7 +17,6 @@ const RouteManager = (props) =>
       <PrivateRoute path='/tasks/' exact component={ TasksListView } key="taskslist"></PrivateRoute>
       <PrivateRoute path='/task/:id' exact component={ EditTask } key="edit"></PrivateRoute>
       <Route path='/register' exact component={ Register } key="register"></Route>
-      <PrivateRoute path='/test' exact component={ Test } key="test"></PrivateRoute>
     </Switch>
   </Router>
 

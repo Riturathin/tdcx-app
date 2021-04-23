@@ -51,11 +51,6 @@ const Register = () => {
 		registerUser()
 	}
 
-	const redirectToLogin = () => {
-		localStorage.removeItem( 'registrationRequested'  );
-		window.location.reload()
-	}
-
 	return (
 		<div className='col-12 col-md-4 offset-md-4'>
 			<CreateTaskModal />
@@ -98,7 +93,7 @@ const Register = () => {
 			    </div>
 
 			    <div className='mt-2 sign-up-link text-center'>
-			    	<Link to="/login" onClick={ redirectToLogin }>Already have an account? Login</Link>
+			    	<Link to="/login" >Already have an account? Login</Link>
 			    </div>
 
 				</form>
